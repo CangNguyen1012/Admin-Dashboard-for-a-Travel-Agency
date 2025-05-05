@@ -8,6 +8,13 @@ const { totalUsers, usersJoined, totalTrips, tripsCreated, userRole } =
 
 export const clientLoader = async () => await getUser();
 const Dashboard = ({ loaderData }: Route.ComponentProps) => {
+  <button
+    onClick={() => {
+      throw new Error("This is your first error!");
+    }}
+  >
+    Break the world
+  </button>;
   const user = loaderData as User | null;
   return (
     <main className="dashboard wrapper">
